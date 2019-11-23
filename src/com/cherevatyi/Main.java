@@ -41,6 +41,14 @@ public class Main {
         System.out.println(inputMan);
         Human outputMan = new Human();
         System.out.println(outputMan);
-
+        FileOutputStream outputStream = new FileOutputStream("C:\\txt\\" + outputMan.getName() + ".txt");
+        BufferedOutputStream outbuffer = new BufferedOutputStream(outputStream);
+        StringBuilder output =  new StringBuilder("city = ").append(outputMan.getCity())
+                .append("; age = ").append(outputMan.getAge())
+                .append(";");
+        byte[] arr = output.toString().getBytes();
+        outbuffer.write(arr);
+        outbuffer.close();
+        outputStream.close();
     }
 }
