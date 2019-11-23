@@ -39,5 +39,8 @@ public class Main {
         inputStream.close();
         buffer.close();
         System.out.println(inputMan);
+        Human outputMan = new Human();
+        System.out.println(outputMan);
+
     }
 }
